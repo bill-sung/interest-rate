@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ir.date_time package &mdash; MRMG Interest Rate 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="MRMG Interest Rate 1 documentation" href="index.html" />
+    <link rel="up" title="ir package" href="ir.html" />
+    <link rel="next" title="ir.model package" href="ir.model.html" />
+    <link rel="prev" title="ir package" href="ir.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ir.model.html" title="ir.model package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ir.html" title="ir package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MRMG Interest Rate 1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >ir</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="ir.html" accesskey="U">ir package</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ir</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ir.html">ir package</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">ir.date_time package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-ir.date_time.conv">ir.date_time.conv module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ir.date_time.enum">ir.date_time.enum module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ir.date_time.util">ir.date_time.util module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ir.model.html">ir.model package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ir.term_structure.html">ir.term_structure package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ir.html"
+                        title="previous chapter">ir package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ir.model.html"
+                        title="next chapter">ir.model package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ir.date_time.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ir-date-time-package">
+<h1>ir.date_time package<a class="headerlink" href="#ir-date-time-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-ir.date_time.conv">
+<span id="ir-date-time-conv-module"></span><h2>ir.date_time.conv module<a class="headerlink" href="#module-ir.date_time.conv" title="Permalink to this headline">¶</a></h2>
+<p>Convert date_time module</p>
+<dl class="function">
+<dt id="ir.date_time.conv.py_to_ql_date">
+<code class="descclassname">ir.date_time.conv.</code><code class="descname">py_to_ql_date</code><span class="sig-paren">(</span><em>py_date</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.date_time.conv.py_to_ql_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert from datetime.date to QuantLib date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>py_date</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.date" title="(in Python v2.7)"><em>datetime.date</em></a>) &#8211; Python date</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">QuantLib date</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">ql.Date</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ir.date_time.conv.ql_period_to_str">
+<code class="descclassname">ir.date_time.conv.</code><code class="descname">ql_period_to_str</code><span class="sig-paren">(</span><em>ql_period</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.date_time.conv.ql_period_to_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ir.date_time.conv.ql_to_py_date">
+<code class="descclassname">ir.date_time.conv.</code><code class="descname">ql_to_py_date</code><span class="sig-paren">(</span><em>ql_date</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.date_time.conv.ql_to_py_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert from ql.Date to datetime.date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ql_date</strong> (<em>ql.Date</em>) &#8211; QuantLib Date</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Python date</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.date" title="(in Python v2.7)">datetime.date</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="ir.date_time.conv.str_to_ql_date">
+<code class="descclassname">ir.date_time.conv.</code><code class="descname">str_to_ql_date</code><span class="sig-paren">(</span><em>str_date</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.date_time.conv.str_to_ql_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert string date to QuantLib date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>str_date</strong> (<em>list, str</em>) &#8211; String date in %m/%d/%Y format (e.g., &#8216;8/4/2016&#8217;)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">QuantLib date in list</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/functions.html#list" title="(in Python v2.7)">list</a></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">conv</span><span class="o">.</span><span class="n">str_to_ql_date</span><span class="p">(</span><span class="s">&#39;8/4/2016&#39;</span><span class="p">))</span>
+<span class="go">August 4th, 2016</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ir.date_time.conv.str_to_ql_period">
+<code class="descclassname">ir.date_time.conv.</code><code class="descname">str_to_ql_period</code><span class="sig-paren">(</span><em>str_period</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.date_time.conv.str_to_ql_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert string period to Quantlib period</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>str_period</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; String period (e.g., &#8216;1Y&#8217;, &#8216;2M&#8217;, &#8216;3W&#8217;, &#8216;4D&#8217;)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">QuantLib period</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">ql.Period</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">conv</span><span class="o">.</span><span class="n">str_to_ql_period</span><span class="p">([</span><span class="s">&#39;6m&#39;</span><span class="p">,</span> <span class="s">&#39;12Y&#39;</span><span class="p">,</span> <span class="s">&#39;30d&#39;</span><span class="p">,</span> <span class="s">&#39;45D&#39;</span><span class="p">]))</span>
+<span class="go">[Period(&quot;6M&quot;), Period(&quot;12Y&quot;), Period(&quot;4W2D&quot;), Period(&quot;6W3D&quot;)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ir.date_time.enum">
+<span id="ir-date-time-enum-module"></span><h2>ir.date_time.enum module<a class="headerlink" href="#module-ir.date_time.enum" title="Permalink to this headline">¶</a></h2>
+<p>Enumerator for DayCount, Compounding, Freq</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://cogitolearning.co.uk/?p=713">http://cogitolearning.co.uk/?p=713</a></li>
+</ul>
+</div>
+<dl class="class">
+<dt id="ir.date_time.enum.Compounding">
+<em class="property">class </em><code class="descclassname">ir.date_time.enum.</code><code class="descname">Compounding</code><a class="headerlink" href="#ir.date_time.enum.Compounding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Enum for compounding</p>
+<dl class="attribute">
+<dt id="ir.date_time.enum.Compounding.Compounded">
+<code class="descname">Compounded</code><em class="property"> = &lt;Compounding.Compounded: 1&gt;</em><a class="headerlink" href="#ir.date_time.enum.Compounding.Compounded" title="Permalink to this definition">¶</a></dt>
+<dd><p>(1 + r)^t</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Compounding.Continuous">
+<code class="descname">Continuous</code><em class="property"> = &lt;Compounding.Continuous: 2&gt;</em><a class="headerlink" href="#ir.date_time.enum.Compounding.Continuous" title="Permalink to this definition">¶</a></dt>
+<dd><p>exp(rt)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Compounding.Simple">
+<code class="descname">Simple</code><em class="property"> = &lt;Compounding.Simple: 0&gt;</em><a class="headerlink" href="#ir.date_time.enum.Compounding.Simple" title="Permalink to this definition">¶</a></dt>
+<dd><p>1 + rt</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ir.date_time.enum.DayCount">
+<em class="property">class </em><code class="descclassname">ir.date_time.enum.</code><code class="descname">DayCount</code><a class="headerlink" href="#ir.date_time.enum.DayCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Enum for day count</p>
+<dl class="attribute">
+<dt id="ir.date_time.enum.DayCount.Act360">
+<code class="descname">Act360</code><em class="property"> = &lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em><a class="headerlink" href="#ir.date_time.enum.DayCount.Act360" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.DayCount.Act365">
+<code class="descname">Act365</code><em class="property"> = &lt;DayCount.Act365: &lt;QuantLib.QuantLib.Actual365Fixed; proxy of &lt;Swig Object of type 'QuantLib::Actual365Fixed *' at 0x0000000006C5A030&gt; &gt;&gt;</em><a class="headerlink" href="#ir.date_time.enum.DayCount.Act365" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.DayCount.ActAct">
+<code class="descname">ActAct</code><em class="property"> = &lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em><a class="headerlink" href="#ir.date_time.enum.DayCount.ActAct" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.DayCount.Simple">
+<code class="descname">Simple</code><em class="property"> = &lt;DayCount.Simple: &lt;QuantLib.QuantLib.SimpleDayCounter; proxy of &lt;Swig Object of type 'QuantLib::SimpleDayCounter *' at 0x0000000006C5A4E0&gt; &gt;&gt;</em><a class="headerlink" href="#ir.date_time.enum.DayCount.Simple" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.DayCount.Thirty360">
+<code class="descname">Thirty360</code><em class="property"> = &lt;DayCount.Thirty360: &lt;QuantLib.QuantLib.Thirty360; proxy of &lt;Swig Object of type 'QuantLib::Thirty360 *' at 0x0000000006C5A4B0&gt; &gt;&gt;</em><a class="headerlink" href="#ir.date_time.enum.DayCount.Thirty360" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ir.date_time.enum.Freq">
+<em class="property">class </em><code class="descclassname">ir.date_time.enum.</code><code class="descname">Freq</code><a class="headerlink" href="#ir.date_time.enum.Freq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Enum for frequency</p>
+<dl class="attribute">
+<dt id="ir.date_time.enum.Freq.Annual">
+<code class="descname">Annual</code><em class="property"> = &lt;Freq.Annual: 1&gt;</em><a class="headerlink" href="#ir.date_time.enum.Freq.Annual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Freq.Daily">
+<code class="descname">Daily</code><em class="property"> = &lt;Freq.Daily: 365&gt;</em><a class="headerlink" href="#ir.date_time.enum.Freq.Daily" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Freq.Monthly">
+<code class="descname">Monthly</code><em class="property"> = &lt;Freq.Monthly: 12&gt;</em><a class="headerlink" href="#ir.date_time.enum.Freq.Monthly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Freq.NoFreq">
+<code class="descname">NoFreq</code><em class="property"> = &lt;Freq.NoFreq: -1&gt;</em><a class="headerlink" href="#ir.date_time.enum.Freq.NoFreq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Freq.Quarterly">
+<code class="descname">Quarterly</code><em class="property"> = &lt;Freq.Quarterly: 4&gt;</em><a class="headerlink" href="#ir.date_time.enum.Freq.Quarterly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Freq.Semiannual">
+<code class="descname">Semiannual</code><em class="property"> = &lt;Freq.Semiannual: 2&gt;</em><a class="headerlink" href="#ir.date_time.enum.Freq.Semiannual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ir.date_time.enum.Freq.Weekly">
+<code class="descname">Weekly</code><em class="property"> = &lt;Freq.Weekly: 52&gt;</em><a class="headerlink" href="#ir.date_time.enum.Freq.Weekly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ir.date_time.util">
+<span id="ir-date-time-util-module"></span><h2>ir.date_time.util module<a class="headerlink" href="#module-ir.date_time.util" title="Permalink to this headline">¶</a></h2>
+<p>Utilities for date_time</p>
+<dl class="function">
+<dt id="ir.date_time.util.get_daycount_from_str">
+<code class="descclassname">ir.date_time.util.</code><code class="descname">get_daycount_from_str</code><span class="sig-paren">(</span><em>daycount_str</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.date_time.util.get_daycount_from_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get date_time.enum.DayCount from string daycount</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>daycount_str</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; daycount string (e.g., &#8216;Act360&#8217;)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Enum for DayCount</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#ir.date_time.enum.DayCount" title="ir.date_time.enum.DayCount">ir.date_time.enum.DayCount</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code> &#8211;
+If the string daycount cannot be matched.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">util</span><span class="o">.</span><span class="n">get_daycount_from_str</span><span class="p">(</span><span class="s">&#39;Act360&#39;</span><span class="p">)</span>
+<span class="go">&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type &#39;QuantLib::Actual360 *&#39; at 0x00000000046A5BD0&gt; &gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ir.date_time.util.notify_val_date_ch">
+<code class="descclassname">ir.date_time.util.</code><code class="descname">notify_val_date_ch</code><span class="sig-paren">(</span><em>val_date</em>, <em>is_raise_error=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.date_time.util.notify_val_date_ch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify the valuation date change. Also, update ql.Settings.instance().evaluationDate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>val_date</strong> (<em>ql.Date</em>) &#8211; Valuation date</li>
+<li><strong>is_raise_error</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Raise error (Default: False, only show warning)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">util</span><span class="o">.</span><span class="n">notify_val_date_ch</span><span class="p">(</span><span class="n">ql</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2000</span><span class="p">))</span>
+<span class="go">2016-05-11 15:51:29 WARNING Valuation date is changed to [January 1st, 2000]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ir.model.html" title="ir.model package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ir.html" title="ir package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MRMG Interest Rate 1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >ir</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="ir.html" >ir package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Bill Sung.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

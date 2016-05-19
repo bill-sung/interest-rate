@@ -1,0 +1,9 @@
+ir package
+==========
+
+.. toctree::
+
+    ir.date_time
+    ir.model
+    ir.term_structure
+

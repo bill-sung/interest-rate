@@ -1,0 +1,27 @@
+ir.model package
+================
+
+ir.model.calib_input_helper module
+----------------------------------
+
+.. automodule:: ir.model.calib_input_helper
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ir.model.hull_white module
+--------------------------
+
+.. automodule:: ir.model.hull_white
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ir.model.short_rate module
+--------------------------
+
+.. automodule:: ir.model.short_rate
+    :members:
+    :undoc-members:
+    :show-inheritance:
+

@@ -1,0 +1,28 @@
+ir.date_time package
+====================
+
+ir.date_time.conv module
+------------------------
+
+.. automodule:: ir.date_time.conv
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ir.date_time.enum module
+------------------------
+
+.. automodule:: ir.date_time.enum
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ir.date_time.util module
+------------------------
+
+.. automodule:: ir.date_time.util
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+

@@ -1,0 +1,28 @@
+ir.term_structure package
+=========================
+
+
+ir.term_structure.bootstrap module
+----------------------------------
+
+.. automodule:: ir.term_structure.bootstrap
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ir.term_structure.bootstrap_input_helper module
+-----------------------------------------------
+
+.. automodule:: ir.term_structure.bootstrap_input_helper
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ir.term_structure.curves module
+-------------------------------
+
+.. automodule:: ir.term_structure.curves
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
