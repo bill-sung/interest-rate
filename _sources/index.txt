@@ -15,7 +15,7 @@ Installation [#f1]_
 
 Dependencies
 -------------
-* numpy, matplotlib, bokeh, scipy can be already installed by anaconda
+* numpy, matplotlib, bokeh, scipy are already installed by anaconda
 * mrmg (by pip install mrmg)
 * quantlib_python (by pip install quantlib_python)
 
