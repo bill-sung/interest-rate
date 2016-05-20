@@ -117,7 +117,7 @@
 </div>
 <dl class="method">
 <dt id="ir.term_structure.bootstrap.Bootstrap.piecewise_cubic">
-<code class="descname">piecewise_cubic</code><span class="sig-paren">(</span><em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap.Bootstrap.piecewise_cubic" title="Permalink to this definition">¶</a></dt>
+<code class="descname">piecewise_cubic</code><span class="sig-paren">(</span><em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C7E090&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap.Bootstrap.piecewise_cubic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate based on piecewise cubic for zero rate
 Valuation date is set as same as settle date defined during input_helper</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -136,7 +136,7 @@ Valuation date is set as same as settle date defined during input_helper</p>
 
 <dl class="method">
 <dt id="ir.term_structure.bootstrap.Bootstrap.piecewise_linear">
-<code class="descname">piecewise_linear</code><span class="sig-paren">(</span><em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap.Bootstrap.piecewise_linear" title="Permalink to this definition">¶</a></dt>
+<code class="descname">piecewise_linear</code><span class="sig-paren">(</span><em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C7E090&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap.Bootstrap.piecewise_linear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate based on piecewise linear for zero rate
 Valuation date is set as same as settle date defined during input_helper</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -155,7 +155,7 @@ Valuation date is set as same as settle date defined during input_helper</p>
 
 <dl class="method">
 <dt id="ir.term_structure.bootstrap.Bootstrap.piecewise_log_cubic_discount">
-<code class="descname">piecewise_log_cubic_discount</code><span class="sig-paren">(</span><em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap.Bootstrap.piecewise_log_cubic_discount" title="Permalink to this definition">¶</a></dt>
+<code class="descname">piecewise_log_cubic_discount</code><span class="sig-paren">(</span><em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C7E090&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap.Bootstrap.piecewise_log_cubic_discount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate based on piecewise log cubic for discount rate
 Valuation date is set as same as settle date defined during input_helper
 This is what QuantLib recommended but it failed on convergence.
@@ -181,7 +181,7 @@ QuantLib-Python does not have access to change the convergence.</p>
 <span id="ir-term-structure-bootstrap-input-helper-module"></span><h2>ir.term_structure.bootstrap_input_helper module<a class="headerlink" href="#module-ir.term_structure.bootstrap_input_helper" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="ir.term_structure.bootstrap_input_helper.deposit">
-<code class="descclassname">ir.term_structure.bootstrap_input_helper.</code><code class="descname">deposit</code><span class="sig-paren">(</span><em>settle</em>, <em>rate</em>, <em>tenor</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap_input_helper.deposit" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.term_structure.bootstrap_input_helper.</code><code class="descname">deposit</code><span class="sig-paren">(</span><em>settle</em>, <em>rate</em>, <em>tenor</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap_input_helper.deposit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input rate from deposit</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -205,7 +205,7 @@ QuantLib-Python does not have access to change the convergence.</p>
 
 <dl class="function">
 <dt id="ir.term_structure.bootstrap_input_helper.future">
-<code class="descclassname">ir.term_structure.bootstrap_input_helper.</code><code class="descname">future</code><span class="sig-paren">(</span><em>settle</em>, <em>rate</em>, <em>mat_date</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em>, <em>convexity_adj=&lt;QuantLib.QuantLib.QuoteHandle; proxy of &lt;Swig Object of type 'std::vector&lt; Handle&lt; Quote &gt; &gt;::value_type *' at 0x000000000A684420&gt; &gt;</em>, <em>months=3</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap_input_helper.future" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.term_structure.bootstrap_input_helper.</code><code class="descname">future</code><span class="sig-paren">(</span><em>settle</em>, <em>rate</em>, <em>mat_date</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em>, <em>convexity_adj=&lt;QuantLib.QuantLib.QuoteHandle; proxy of &lt;Swig Object of type 'std::vector&lt; Handle&lt; Quote &gt; &gt;::value_type *' at 0x000000000A63C930&gt; &gt;</em>, <em>months=3</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap_input_helper.future" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default setting is for Eurodollar future.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -231,10 +231,8 @@ QuantLib-Python does not have access to change the convergence.</p>
 
 <dl class="function">
 <dt id="ir.term_structure.bootstrap_input_helper.swap">
-<code class="descclassname">ir.term_structure.bootstrap_input_helper.</code><code class="descname">swap</code><span class="sig-paren">(</span><em>settle</em>, <em>rate</em>, <em>tenor</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>fixed_daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em>, <em>floating_index=&lt;QuantLib.QuantLib.USDLibor; proxy of &lt;Swig Object of type 'USDLiborPtr *' at 0x000000000A6845D0&gt; &gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap_input_helper.swap" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is assuming USD Libor swap
-Default specification on the interest rate swap is from:
-<a class="reference external" href="http://www.swapex.com/swapex2/media/cms_page_media/67/SwapEx%20Contract%20Specifications.pdf">http://www.swapex.com/swapex2/media/cms_page_media/67/SwapEx%20Contract%20Specifications.pdf</a></p>
+<code class="descclassname">ir.term_structure.bootstrap_input_helper.</code><code class="descname">swap</code><span class="sig-paren">(</span><em>settle</em>, <em>rate</em>, <em>tenor</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>fixed_daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em>, <em>floating_index=&lt;QuantLib.QuantLib.USDLibor; proxy of &lt;Swig Object of type 'USDLiborPtr *' at 0x000000000A63C900&gt; &gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.bootstrap_input_helper.swap" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is assuming USD Libor swap</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -255,6 +253,12 @@ Default: ql.USDLibor(ql.Period(&#8216;3M&#8217;))</li>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://www.swapex.com/swapex2/media/cms_page_media/67/SwapEx%20Contract%20Specifications.pdf">http://www.swapex.com/swapex2/media/cms_page_media/67/SwapEx%20Contract%20Specifications.pdf</a></li>
+</ul>
+</div>
 </dd></dl>
 
 </div>
@@ -285,7 +289,7 @@ Default: ql.USDLibor(ql.Period(&#8216;3M&#8217;))</li>
 
 <dl class="method">
 <dt id="ir.term_structure.curves.Curve.get_discount_factor">
-<code class="descname">get_discount_factor</code><span class="sig-paren">(</span><em>sim_ql_date</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.Curve.get_discount_factor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_discount_factor</code><span class="sig-paren">(</span><em>sim_ql_date</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.Curve.get_discount_factor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get discount factor</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -309,7 +313,7 @@ Default: ql.USDLibor(ql.Period(&#8216;3M&#8217;))</li>
 
 <dl class="method">
 <dt id="ir.term_structure.curves.Curve.get_forward">
-<code class="descname">get_forward</code><span class="sig-paren">(</span><em>sim_ql_sdate</em>, <em>sim_ql_edate</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Compounded: 1&gt;</em>, <em>freq=&lt;Freq.Semiannual: 2&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.Curve.get_forward" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_forward</code><span class="sig-paren">(</span><em>sim_ql_sdate</em>, <em>sim_ql_edate</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Compounded: 1&gt;</em>, <em>freq=&lt;Freq.Semiannual: 2&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.Curve.get_forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get forward rate</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -336,7 +340,7 @@ Default: ql.USDLibor(ql.Period(&#8216;3M&#8217;))</li>
 
 <dl class="method">
 <dt id="ir.term_structure.curves.Curve.get_zero">
-<code class="descname">get_zero</code><span class="sig-paren">(</span><em>sim_ql_date</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Compounded: 1&gt;</em>, <em>freq=&lt;Freq.Semiannual: 2&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.Curve.get_zero" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_zero</code><span class="sig-paren">(</span><em>sim_ql_date</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Compounded: 1&gt;</em>, <em>freq=&lt;Freq.Semiannual: 2&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.Curve.get_zero" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get zero (spot) rate
 Unlike Matlab, extrapolation does not work for the shorter tenors.
 It only works on longer tenors</p>
@@ -366,7 +370,7 @@ It only works on longer tenors</p>
 
 <dl class="class">
 <dt id="ir.term_structure.curves.FlatForward">
-<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">FlatForward</code><span class="sig-paren">(</span><em>settle</em>, <em>forward_rate</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Continuous: 2&gt;</em>, <em>compound_freq=&lt;Freq.Annual: 1&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.FlatForward" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">FlatForward</code><span class="sig-paren">(</span><em>settle</em>, <em>forward_rate</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Continuous: 2&gt;</em>, <em>compound_freq=&lt;Freq.Annual: 1&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.FlatForward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ir.term_structure.curves.Curve" title="ir.term_structure.curves.Curve"><code class="xref py py-class docutils literal"><span class="pre">ir.term_structure.curves.Curve</span></code></a></p>
 <p>FlatForward class
 This is used for curve construction without bootstrapping</p>
@@ -391,7 +395,7 @@ This is used for curve construction without bootstrapping</p>
 
 <dl class="class">
 <dt id="ir.term_structure.curves.PiecewiseCubic">
-<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseCubic</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseCubic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseCubic</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C7E090&gt; &gt;&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseCubic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ir.term_structure.curves.PiecewiseCurve" title="ir.term_structure.curves.PiecewiseCurve"><code class="xref py py-class docutils literal"><span class="pre">ir.term_structure.curves.PiecewiseCurve</span></code></a></p>
 <p>Interpolate based on piecewise cubic for zero rate</p>
 <dl class="attribute">
@@ -408,7 +412,7 @@ This is used for curve construction without bootstrapping</p>
 
 <dl class="class">
 <dt id="ir.term_structure.curves.PiecewiseCurve">
-<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseCurve</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseCurve" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseCurve</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C7E090&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseCurve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ir.term_structure.curves.Curve" title="ir.term_structure.curves.Curve"><code class="xref py py-class docutils literal"><span class="pre">ir.term_structure.curves.Curve</span></code></a></p>
 <p>Base class for curve constructed by bootstrap
 Valuation date is set as same as settle date defined during input_helper</p>
@@ -435,7 +439,7 @@ Valuation date is set as same as settle date defined during input_helper</p>
 
 <dl class="class">
 <dt id="ir.term_structure.curves.PiecewiseLinear">
-<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseLinear</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseLinear" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseLinear</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C7E090&gt; &gt;&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseLinear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ir.term_structure.curves.PiecewiseCurve" title="ir.term_structure.curves.PiecewiseCurve"><code class="xref py py-class docutils literal"><span class="pre">ir.term_structure.curves.PiecewiseCurve</span></code></a></p>
 <p>Interpolate based on piecewise linear for zero rate</p>
 <dl class="attribute">
@@ -452,7 +456,7 @@ Valuation date is set as same as settle date defined during input_helper</p>
 
 <dl class="class">
 <dt id="ir.term_structure.curves.PiecewiseLogCubicDiscount">
-<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseLogCubicDiscount</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C5A060&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseLogCubicDiscount" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">PiecewiseLogCubicDiscount</code><span class="sig-paren">(</span><em>input_helper</em>, <em>daycount=&lt;DayCount.ActAct: &lt;QuantLib.QuantLib.ActualActual; proxy of &lt;Swig Object of type 'QuantLib::ActualActual *' at 0x0000000006C7E090&gt; &gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.PiecewiseLogCubicDiscount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ir.term_structure.curves.PiecewiseCurve" title="ir.term_structure.curves.PiecewiseCurve"><code class="xref py py-class docutils literal"><span class="pre">ir.term_structure.curves.PiecewiseCurve</span></code></a></p>
 <p>Interpolate based on piecewise log cubic for discount rate
 Valuation date is set as same as settle date defined during input_helper</p>
@@ -470,7 +474,7 @@ Valuation date is set as same as settle date defined during input_helper</p>
 
 <dl class="class">
 <dt id="ir.term_structure.curves.SpotCurve">
-<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">SpotCurve</code><span class="sig-paren">(</span><em>settle</em>, <em>spot_date</em>, <em>spot_rate</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069D0F60&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Compounded: 1&gt;</em>, <em>compound_freq=&lt;Freq.Annual: 1&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.SpotCurve" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ir.term_structure.curves.</code><code class="descname">SpotCurve</code><span class="sig-paren">(</span><em>settle</em>, <em>spot_date</em>, <em>spot_rate</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006BF0F90&gt; &gt;&gt;</em>, <em>compounding=&lt;Compounding.Compounded: 1&gt;</em>, <em>compound_freq=&lt;Freq.Annual: 1&gt;</em>, <em>val_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.term_structure.curves.SpotCurve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ir.term_structure.curves.Curve" title="ir.term_structure.curves.Curve"><code class="xref py py-class docutils literal"><span class="pre">ir.term_structure.curves.Curve</span></code></a></p>
 <p>SpotCurve class
 This is used for curve construction without bootstrapping</p>

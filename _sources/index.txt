@@ -3,12 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MRMG Interest Rate's documentation
+MRMG Interest Rate Python documentation
 ==============================================
 
-Contents:
+Installation [#f1]_
+-----------------
+* `General installation for Python and pip <http://sites.suntrust.com/teams/MRMG/market_finance_val/Docs/python_readme.docx?Web=1>`_
+* `General installation for git for MRMG git server <http://sites.suntrust.com/teams/MRMG/market_finance_val/Docs/Git%20installation.docx?Web=1>`_
+* Package source code can be found from `SunTrust internal server <http://10.7.214.57:8084/>`_
+
+
+Dependencies
+-------------
+* numpy, matplotlib, bokeh, scipy can be already installed by anaconda
+* mrmg (by pip install mrmg)
+* quantlib_python (by pip install quantlib_python)
+
+Summary on the package
+-----------------------
+* Yield term structure construction
+* Short rate modeling (calibration / simulation)
+
+
+Contents
+---------
 
 .. toctree::
    :maxdepth: 5
 
    modules
+
+
+.. rubric:: Footnotes
+.. [#f1] Due to security issue, the link may not be open if you are outside of SunTrust network
