@@ -112,27 +112,30 @@
 <dt id="ir.model.calib_input_helper.CalibrationError">
 <em class="property">class </em><code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">CalibrationError</code><a class="headerlink" href="#ir.model.calib_input_helper.CalibrationError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
-<p>An enumeration.</p>
+<p>Calibration error enum</p>
 <dl class="attribute">
 <dt id="ir.model.calib_input_helper.CalibrationError.Prc">
 <code class="descname">Prc</code><em class="property"> = &lt;CalibrationError.Prc: 1&gt;</em><a class="headerlink" href="#ir.model.calib_input_helper.CalibrationError.Prc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Price error</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="ir.model.calib_input_helper.CalibrationError.RelPrc">
 <code class="descname">RelPrc</code><em class="property"> = &lt;CalibrationError.RelPrc: 0&gt;</em><a class="headerlink" href="#ir.model.calib_input_helper.CalibrationError.RelPrc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Relative price error</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="ir.model.calib_input_helper.CalibrationError.Vol">
 <code class="descname">Vol</code><em class="property"> = &lt;CalibrationError.Vol: 2&gt;</em><a class="headerlink" href="#ir.model.calib_input_helper.CalibrationError.Vol" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Implied volatility error</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="ir.model.calib_input_helper.cap">
-<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">cap</code><span class="sig-paren">(</span><em>term_structure</em>, <em>cap_tenor</em>, <em>cap_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006B8EF90&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.cap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">cap</code><span class="sig-paren">(</span><em>term_structure</em>, <em>cap_tenor</em>, <em>cap_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x000000000693F0F0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.cap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibration helper for cap</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -151,9 +154,15 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">list, pandas.DataFrame
-- list: list of ql.SwaptionHelper
-- DataFrame: [&#8216;Vol&#8217;, &#8216;Weight&#8217;]</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>tuple contains:</p>
+<ul class="simple">
+<li>helper (list): list of ql.CalibrationHelper</li>
+<li>input_data (Pandas.DataFrmae): DataFrame by columns: &#8216;vol&#8217;, &#8216;weight&#8217; and index: &#8216;name&#8217;</li>
+</ul>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></p>
 </td>
 </tr>
 </tbody>
@@ -179,13 +188,15 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>ql.Date, list, pandas.DataFrame</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>tuple contains:</p>
 <ul class="simple">
-<li>ql.Date: Settle date</li>
-<li>list: list of helpers</li>
-<li>pandas.DataFrame: DataFrame by columns: &#8216;vol&#8217;, &#8216;weight&#8217; and index: &#8216;name&#8217;</li>
+<li>helper (list): list of ql.CalibrationHelper</li>
+<li>input_data (Pandas.DataFrmae): DataFrame by columns: &#8216;vol&#8217;, &#8216;weight&#8217; and index: &#8216;name&#8217;</li>
 </ul>
 </p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></p>
 </td>
 </tr>
 </tbody>
@@ -194,7 +205,7 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 
 <dl class="function">
 <dt id="ir.model.calib_input_helper.swaption">
-<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">swaption</code><span class="sig-paren">(</span><em>term_structure</em>, <em>swaption_exercise</em>, <em>swap_tenor</em>, <em>swaption_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006B8EF90&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.swaption" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">swaption</code><span class="sig-paren">(</span><em>term_structure</em>, <em>swaption_exercise</em>, <em>swap_tenor</em>, <em>swaption_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x000000000693F0F0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.swaption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibration helper for swaption</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -214,9 +225,15 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">list, pandas.DataFrame
-- list: list of ql.SwaptionHelper
-- DataFrame: [&#8216;Vol&#8217;, &#8216;Weight&#8217;]</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>tuple contains:</p>
+<ul class="simple">
+<li>helper (list): list of ql.CalibrationHelper</li>
+<li>input_data (Pandas.DataFrmae): DataFrame by columns: &#8216;vol&#8217;, &#8216;weight&#8217; and index: &#8216;name&#8217;</li>
+</ul>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></p>
 </td>
 </tr>
 </tbody>
@@ -296,19 +313,22 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 <li><strong>sim_period</strong> (<em>ql.Period</em>) &#8211; Simulation period</li>
 <li><strong>sim_freq</strong> (<a class="reference internal" href="ir.date_time.html#ir.date_time.enum.Freq" title="ir.date_time.enum.Freq"><em>date_time.enum.Freq</em></a>) &#8211; Simulation period</li>
 <li><strong>sim_path</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; Simulation number of path</li>
-<li><strong>random_seed</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; random seed (Default: None, create based on system time or som)</li>
+<li><strong>random_seed</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; Random seed (Default: None, create based on system time or so)</li>
 <li><strong>is_brownian_bridge</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Brownian bridge (Default: True)</li>
 <li><strong>is_plot</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Plot short rate (Default: False)</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>list, numpy.array, numpy.array</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>tuple contains:</p>
 <ul class="simple">
-<li>list: Simulation time in year</li>
-<li>numpy.array: Short rate; sim_path x sim_time_step+1 array</li>
-<li>numpy.array: Discount factor; sim_path x sim_time_step+1 array</li>
+<li>sim_time (list): Simulation time in year</li>
+<li>sim_short_rate (numpy.array): Short rate; sim_path x sim_time_step+1 array</li>
+<li>sim_discount_factor (numpy.array): Discount factor; sim_path x sim_time_step+1 array</li>
 </ul>
 </p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></p>
 </td>
 </tr>
 </tbody>
@@ -354,7 +374,8 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 <dl class="method">
 <dt id="ir.model.short_rate.ShortRate.plot_calibration">
 <code class="descname">plot_calibration</code><span class="sig-paren">(</span><em>calib_result</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.short_rate.ShortRate.plot_calibration" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Plot calibration results</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -366,21 +387,20 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 </tr>
 </tbody>
 </table>
-<p>Returns:</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="ir.model.short_rate.ShortRate.set_param">
 <code class="descname">set_param</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.short_rate.ShortRate.set_param" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set parameters after instantiation
-:param **kwargs: param_name=param_val format (it will initialized the parameter)</p>
-<blockquote>
-<div>(e.g., set_param(alpha=0.01, sigma=0.01) for ir.model.hull_white.HullWhile1F)</div></blockquote>
+<dd><p>Set parameters after instantiation</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code> &#8211;
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>**kwargs</strong> &#8211; param_name=param_val format (it will initialized the parameter)
+(e.g., set_param(alpha=0.01, sigma=0.01) for ir.model.hull_white.HullWhile1F)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code> &#8211;
 if curve is not instance of ir.term_structure.curves.Curve</td>
 </tr>
 </tbody>
