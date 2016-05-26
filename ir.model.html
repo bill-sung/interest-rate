@@ -141,7 +141,7 @@
 
 <dl class="function">
 <dt id="ir.model.calib_input_helper.cap">
-<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">cap</code><span class="sig-paren">(</span><em>term_structure</em>, <em>cap_tenor</em>, <em>cap_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006A5C0F0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.PrcSq: 3&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.cap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">cap</code><span class="sig-paren">(</span><em>term_structure</em>, <em>cap_tenor</em>, <em>cap_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x000000000690FF90&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.PrcSq: 3&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.cap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibration helper for cap</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -218,7 +218,7 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 
 <dl class="function">
 <dt id="ir.model.calib_input_helper.swaption">
-<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">swaption</code><span class="sig-paren">(</span><em>term_structure</em>, <em>swaption_exercise</em>, <em>swap_tenor</em>, <em>swaption_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x0000000006A5C0F0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.PrcSq: 3&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.swaption" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">swaption</code><span class="sig-paren">(</span><em>term_structure</em>, <em>swaption_exercise</em>, <em>swap_tenor</em>, <em>swaption_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x000000000690FF90&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.PrcSq: 3&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.swaption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibration helper for swaption</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -263,18 +263,38 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 <dd><p>Bases: <a class="reference internal" href="#ir.model.short_rate.ShortRate" title="ir.model.short_rate.ShortRate"><code class="xref py py-class docutils literal"><span class="pre">ir.model.short_rate.ShortRate</span></code></a></p>
 <p>Hull-White one factor model class</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">curve</span> <span class="o">=</span> <span class="n">FlatForward</span><span class="p">(</span><span class="n">ql</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2002</span><span class="p">),</span> <span class="mf">0.04875825</span><span class="p">,</span> <span class="n">daycount</span><span class="o">=</span><span class="n">DayCount</span><span class="o">.</span><span class="n">Act365</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span> <span class="o">=</span> <span class="n">HullWhite1F</span><span class="p">(</span><span class="n">curve</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="s">&#39;&#39;&#39;calib_hw1f_euribor.json&#39;&#39;&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">hw1f</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
-<span class="go">{&#39;alpha&#39;: 0.04641697539064844, &#39;sigma&#39;: 0.005799411064368165}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">ql</span><span class="o">.</span><span class="n">Period</span><span class="p">(</span><span class="s">&#39;1Y&#39;</span><span class="p">),</span> <span class="n">Freq</span><span class="o">.</span><span class="n">Quarterly</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">is_plot</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="go">2016-05-11 16:22:14 INFO Random seed is set as 1000</span>
-<span class="go">([0.0, 0.25, 0.5, 0.75, 1.0],</span>
-<span class="go">array([[ 0.04875825,  0.04567013,  0.04755594,  0.04992099,  0.05110811]]),</span>
-<span class="go">array([[ 1.        ,  0.98826584,  0.97701863,  0.96509589,  0.95302714]]))</span>
+<ul class="simple">
+<li>Curve Construction</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">curve</span> <span class="o">=</span> <span class="n">FlatForward</span><span class="p">(</span><span class="n">ql</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2002</span><span class="p">),</span> <span class="mf">0.04875825</span><span class="p">,</span> <span class="n">daycount</span><span class="o">=</span><span class="n">DayCount</span><span class="o">.</span><span class="n">Act365</span><span class="p">,</span> <span class="n">val_date</span><span class="o">=</span><span class="n">ql</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2002</span><span class="p">))</span>
+<span class="go">2016-05-26 14:14:38 WARNING Valuation date is changed to [February 15th, 2002]</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li>Calibration</li>
+</ul>
+<p>calib_hw1f_euribor.json is located in ir/model/test
+&gt;&gt;&gt; hw1f = HullWhite1F(curve, alpha=0.1, sigma=0.01)
+&gt;&gt;&gt; hw1f.calibrate(&#8216;calib_hw1f_euribor.json&#8217;,  is_plot=True, calib_error=CalibrationError.RelPrc)
+&gt;&gt;&gt; print(hw1f.param)
+{&#8216;alpha&#8217;: 0.04641648494793499, &#8216;sigma&#8217;: 0.005799411064368165}</p>
+<a class="reference internal image-reference" href="_images/hw_example_calibrate.png"><img alt="_images/hw_example_calibrate.png" src="_images/hw_example_calibrate.png" style="width: 75%;" /></a>
+<p>You can also calibrate by fixing alpha to 0.06</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">self</span><span class="o">.</span><span class="n">hw1f</span><span class="o">.</span><span class="n">set_param</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.06</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="s">&#39;&#39;&#39;calib_hw1f_euribor.json&#39;&#39;&#39;</span><span class="p">,</span>  <span class="n">is_fix_alpha</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">is_plot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">calib_error</span><span class="o">=</span><span class="n">CalibrationError</span><span class="o">.</span><span class="n">RelPrc</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">hw1f</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
+<span class="go">{&#39;alpha&#39;: 0.06, &#39;sigma&#39;: 0.00602605472101786}</span>
+</pre></div>
+</div>
+<p>You will see that the error has increased slightly</p>
+<a class="reference internal image-reference" href="_images/hw_example_calibrate_fix_alpha.png"><img alt="_images/hw_example_calibrate_fix_alpha.png" src="_images/hw_example_calibrate_fix_alpha.png" style="width: 75%;" /></a>
+<ul class="simple">
+<li>Simulation</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">ql</span><span class="o">.</span><span class="n">Period</span><span class="p">(</span><span class="s">&#39;10Y&#39;</span><span class="p">),</span> <span class="n">Freq</span><span class="o">.</span><span class="n">Monthly</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">is_plot</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/hw_example_sim.png"><img alt="_images/hw_example_sim.png" src="_images/hw_example_sim.png" style="width: 75%;" /></a>
 <dl class="method">
 <dt id="ir.model.hull_white.HullWhite1F.calibrate">
 <code class="descname">calibrate</code><span class="sig-paren">(</span><em>calib_json_file</em>, <em>is_fix_alpha=False</em>, <em>is_fix_sigma=False</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em>, <em>is_plot=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.hull_white.HullWhite1F.calibrate" title="Permalink to this definition">¶</a></dt>
