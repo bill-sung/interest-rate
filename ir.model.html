@@ -135,7 +135,7 @@
 
 <dl class="function">
 <dt id="ir.model.calib_input_helper.cap">
-<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">cap</code><span class="sig-paren">(</span><em>term_structure</em>, <em>cap_tenor</em>, <em>cap_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000066D32A0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.cap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">cap</code><span class="sig-paren">(</span><em>term_structure</em>, <em>cap_tenor</em>, <em>cap_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069810F0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.cap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibration helper for cap</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -212,7 +212,7 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 
 <dl class="function">
 <dt id="ir.model.calib_input_helper.swaption">
-<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">swaption</code><span class="sig-paren">(</span><em>term_structure</em>, <em>swaption_exercise</em>, <em>swap_tenor</em>, <em>swaption_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000066D32A0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.swaption" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ir.model.calib_input_helper.</code><code class="descname">swaption</code><span class="sig-paren">(</span><em>term_structure</em>, <em>swaption_exercise</em>, <em>swap_tenor</em>, <em>swaption_vol</em>, <em>weight</em>, <em>pricing_engine</em>, <em>floating_index</em>, <em>daycount=&lt;DayCount.Act360: &lt;QuantLib.QuantLib.Actual360; proxy of &lt;Swig Object of type 'QuantLib::Actual360 *' at 0x00000000069810F0&gt; &gt;&gt;</em>, <em>fixed_freq=&lt;Freq.Semiannual: 2&gt;</em>, <em>calib_error=&lt;CalibrationError.Prc: 1&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ir.model.calib_input_helper.swaption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibration helper for swaption</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -267,11 +267,13 @@ Input types are swaption, caps (todo) on Libor 3M</p>
 <ul class="simple">
 <li>Calibration</li>
 </ul>
-<p>calib_hw1f_euribor.json is located in ir/model/test
-&gt;&gt;&gt; hw1f = HullWhite1F(curve, alpha=0.1, sigma=0.01)
-&gt;&gt;&gt; hw1f.calibrate(&#8216;calib_hw1f_euribor.json&#8217;,  is_plot=True, calib_error=CalibrationError.RelPrc)
-&gt;&gt;&gt; print(hw1f.param)
-{&#8216;alpha&#8217;: 0.04641648494793499, &#8216;sigma&#8217;: 0.005799411064368165}</p>
+<p>calib_hw1f_euribor.json is located in ir/model/test</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span> <span class="o">=</span> <span class="n">HullWhite1F</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="s">&#39;calib_hw1f_euribor.json&#39;</span><span class="p">,</span>  <span class="n">is_plot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">calib_error</span><span class="o">=</span><span class="n">CalibrationError</span><span class="o">.</span><span class="n">RelPrc</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">hw1f</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
+<span class="go">{&#39;alpha&#39;: 0.04641648494793499, &#39;sigma&#39;: 0.005799411064368165}</span>
+</pre></div>
+</div>
 <a class="reference internal image-reference" href="_images/hw_example_calibrate.png"><img alt="_images/hw_example_calibrate.png" src="_images/hw_example_calibrate.png" style="width: 75%;" /></a>
 <p>You can also calibrate by fixing alpha to 0.06</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">self</span><span class="o">.</span><span class="n">hw1f</span><span class="o">.</span><span class="n">set_param</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.06</span><span class="p">)</span>
@@ -287,8 +289,12 @@ The objective function does not change much around alpha: 0.0464, sigma: 0.0057.
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">hw1f</span><span class="o">.</span><span class="n">plot_objective_fun</span><span class="p">(</span><span class="s">&#39;calib_hw1f_euribor.json&#39;</span><span class="p">,</span> <span class="n">calib_error</span><span class="o">=</span><span class="n">CalibrationError</span><span class="o">.</span><span class="n">RelPrc</span><span class="p">)</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/hw_example_surface.png"><img alt="_images/hw_example_surface.png" src="_images/hw_example_surface.png" style="width: 45%;" /></a>
-<a class="reference internal image-reference" href="_images/hw_example_2dplot.png"><img alt="_images/hw_example_2dplot.png" src="_images/hw_example_2dplot.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="_images/hw_example_surface.png"><img alt="_images/hw_example_surface.png" src="_images/hw_example_surface.png" style="width: 75%;" /></a>
+<p>The 2-D plot (alpha vs. relative price error) is presented below by fixing sigma = 0.0060</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">hw1f</span><span class="o">.</span><span class="n">plot_objective_fun</span><span class="p">(</span><span class="s">&#39;calib_hw1f_euribor.json&#39;</span><span class="p">,</span> <span class="n">calib_error</span><span class="o">=</span><span class="n">CalibrationError</span><span class="o">.</span><span class="n">RelPrc</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">sigma</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0060</span><span class="p">])</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/hw_example_2dplot.png"><img alt="_images/hw_example_2dplot.png" src="_images/hw_example_2dplot.png" style="width: 75%;" /></a>
 <ul class="simple">
 <li>Simulation</li>
 </ul>
