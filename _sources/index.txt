@@ -8,8 +8,8 @@ MRMG Interest Rate documentation
 
 Installation [#f1]_
 -----------------
-* `General installation for Python and pip <http://sites.suntrust.com/teams/MRMG/market_finance_val/Docs/python_readme.docx?Web=1>`_
-* `General installation for git for MRMG git server <http://sites.suntrust.com/teams/MRMG/market_finance_val/Docs/Git%20installation.docx?Web=1>`_
+* `General installation for Python and pip <http://sites.suntrust.com/teams/MRMG/market_finance_val/Docs/python_install_guideline.docx?Web=1>`_
+* `General installation for git for MRMG git server <http://sites.suntrust.com/teams/MRMG/market_finance_val/Docs/Git_install_guideline.docx?Web=1>`_
 * Package source code can be found from `SunTrust internal server <http://10.7.214.57:8084/>`_
 
 
